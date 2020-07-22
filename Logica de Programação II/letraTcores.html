@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function quadrado(x,y,cor){ //criar uma função para um item que poderá ser usado varias vezes
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle=cor;
+        pincel.fillRect(x,y,50,50); //o x indicará onde o rect ira iniciar quando chamar a função.
+        pincel.strokeStyle='black';
+        pincel.strokeRect(x,y,50,50);
+    }
+    //quadrados no eixo X
+    quadrado(0,0, 'darkblue'); //chamando a função criada quantas vezes forem necessárias.
+    quadrado(50,0, 'white'); //informando onde o quadrado ira iniciar.
+    quadrado(100,0, 'darkblue'); //para criar rect em Y apenas trocar os valores
+    quadrado(150,0, 'white');
+    quadrado(200,0, 'darkblue');
+
+    //quadrados no eixo Y
+    quadrado(100,50,'white');
+    quadrado(100,100,'darkblue');
+    quadrado(100,150,'white');
+    quadrado(100,200,'darkblue');
+
+    
+    
+
+</script>

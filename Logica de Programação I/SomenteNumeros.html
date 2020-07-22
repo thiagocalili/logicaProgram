@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<h4> Irá aceitar somente um valor numérico.</h4>
+
+<script>
+    function enter(){
+        document.write("</br></br>");
+    }
+    function printar (frase){
+        document.write(frase);
+        enter();
+    }
+
+    var idade = parseInt(prompt("Digite sua idade"));
+    while( isNaN(idade) ) {
+        idade = parseInt(prompt("Digite sua idade"));    
+    }
+
+    printar("Sua idade é: " + idade + " anos.");
+
+</script>

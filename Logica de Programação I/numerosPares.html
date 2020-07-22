@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+    <h1> Números Pares de 0 a 100</h1>
+    
+<script>
+    function enter() {
+        document.write("<br>");
+    }
+    function printar(frase) {
+        document.write(frase);
+        enter();
+    }
+
+    var contador = 2;
+    while(contador <= 100) {
+        printar(contador);
+        contador = contador + 2; // incrementa de dois em dois
+    }
+    printar("FIM");
+</script>

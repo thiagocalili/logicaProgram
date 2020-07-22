@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h2> Impressão da tabuada de Multiplicação:</h2>
+
+<script>
+    function enter(){
+        document.write("</br></br>");
+    }
+    function printar(frase){
+        document.write(frase);
+        enter();
+    }
+
+    //var multi = 1;
+    var numero = parseInt(prompt("Digite qual tabuada a multiplicar:"));
+        
+    printar("Esta é a tabuada do " + numero);
+
+    for (var multi=0; multi<=10; multi++){
+        var conta = (numero * multi);
+        printar(numero + "x" + multi + "=" + conta);
+    }
+    /*
+    while (multi <=10 ){
+        var conta = numero * multi;
+        printar(numero, "x" , multi, "=", conta);
+        //multi = multi +1;
+    }*/
+
+</script>

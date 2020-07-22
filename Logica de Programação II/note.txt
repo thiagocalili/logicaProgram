@@ -1,0 +1,15 @@
+1 - canvas - seria como uma tela em branco pra desenho.
+
+2 - height="altura" width="largura"
+
+3 - pincel.fillStyle - preenchimento de cor
+
+4 - pincel.fillRect(0, 0, 600, 400); tamanho do retangulo de inicio e final em x e y
+
+5 - pincel.moveTo - pincel mover do ponto inicial
+
+6 - pincel.lineTo - pincel mover para este proximo ponto
+
+7 - pincel.beginPath() - Iniciar traços do pincel
+
+8 - pincel.strokeStyle - cor da borda

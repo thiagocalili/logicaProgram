@@ -1,0 +1,44 @@
+<h1> Clicando e colorindo</h1>
+<h5> Clique com o botão esquerdo para pintar e com botão direito para mudar a cor!</h5>
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var cores = ['blue', 'red', 'green', 'yellow', 'pink', 'black','white'];
+    var corAtual = 0;
+
+    function desenhaCirculo(evento) {
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+        pincel.fillStyle=cores[corAtual];
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2*3.14);
+        pincel.fill();
+
+        console.log("posição do clique : " + x + ", " + y);
+    }
+
+    // não esqueça de mudar aqui
+    tela.onclick = desenhaCirculo;
+
+    function mudaCor() {
+        
+        corAtual++;
+        if(corAtual >= cores.length) {
+            corAtual = 0; // volta para a primeira cor, azul
+        }
+
+        //alert('Funcionou!');
+        return false;
+    }
+
+    tela.oncontextmenu = mudaCor;
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<h4> Digite um valor e tente advinhar o número sorteado!</h4>
+<input/>
+<button> Tente advinhar!</button>
+
+<script>
+    var segredo = Math.round(Math.random() * 10);
+    var input = document.querySelector("input");
+    input.focus();
+    function verifica(){
+        if (input.value == segredo){
+            alert("PARABÉNS ..... VOCÊ ACERTOU!!!");
+        } else {
+            alert("QUE PENA, VOCÊ ERROU!!!!");        
+        }
+        input.value = "";
+        input.focus();
+    }
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

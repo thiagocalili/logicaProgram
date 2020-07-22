@@ -1,0 +1,23 @@
+<canvas width="600" height="600">
+
+</canvas>
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = "black"; //molha pincel na tinta
+    pincel.beginPath(); //inicia o pincel na tela
+    pincel.moveTo (50,50); //informa o ponto de inicio
+    pincel.lineTo (50,400); //segue o trajeto até o ponto
+    pincel.lineTo (400,400); //segue o trajeto até o ponto
+    pincel.fill(); //aciona a cor.
+
+    pincel.fillStyle = "white";
+    pincel.beginPath();
+    pincel.moveTo(100, 175);
+    pincel.lineTo(100,350);
+    pincel.lineTo(275,350);
+    pincel.fill();
+
+
+</script>

@@ -1,0 +1,40 @@
+1-<meta charset="utf-8"># inicio para acentuação
+
+2-<br> #pular linha
+
+3-<h1> </h1> destaque
+
+4-var=; #variável,sempre inicia letra minúscula e segunda palavra maiúscula
+
+5-document.write(""); #texto html dentro do Java script
+
+6-alert(""); # um alerta,lembrando de espaçar no inicio ,dois cliques
+
+7-<a href"pagina a ser direcionada">aqui</a>
+
+8-string # texto exibido
+
+9-Math.round(variável) #para arredondar casas decimais.
+
+10 -<script> #sinalizar que é uma linguagem Java script
+
+11- números a serem calculados  não ficam entre "",somente textos
+
+12- concatenação,qd se liga uma strig a outra,ou seja ""
+
+13 - Acessar depurador:  "F12", ou por "Ctrl + Shift + C".
+
+14 - parseInt() converte texto em numero.
+
+15 - Math.random () - gera um número aleatório.
+
+16 - parseFloat números decimais.
+
+17 - input.value - valor de entrada
+
+18 - button.onclick - quando clicar no botao
+
+19 - document.querySelector - busca no documento html a referencia query
+
+20 - input.focus - foca na entrada, já retornando a ela.
+
