@@ -1,0 +1,69 @@
+<canvas width="600" height="400"></canvas>
+<h4>Escolha uma cor:</h4> <input type='color' id="color" name='color'>
+<h4>Escolha a espessura do pincel: </h4><input type="number" id="ponta" name="ponta">
+
+<script>
+    var novaCor = document.getElementById ('color');
+    var tamanhoPonta = document.getElementById("ponta");
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+    //console.log(input);
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var desenha = false;
+    
+    function desenhaCirculo(evento) {
+
+        if (desenha){
+                        
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = novaCor.value;
+            pincel.beginPath();
+            pincel.arc(x, y, tamanhoPonta.value, 0, 2 * 3.14);
+            pincel.fill();
+            //console.log(x + ',' + y);
+        }
+        
+    }
+
+    tela.onmousemove = desenhaCirculo;
+
+    function habilitaDesenho(){
+        desenha=true;    
+    }
+    function desabilitaDesenho(){
+        desenha=false;
+    }
+    tela.onmousedown = habilitaDesenho;
+    tela.onmouseup = desabilitaDesenho;
+    /* Pode ser usado funções anonimas no js, indicando a variavel diretamente a função:
+            //codigos acima
+            // atribuindo diretamente a função anônima
+            tela.onmousemove = function(evento) { //onmousemove já recebe a função de desenha
+
+                if(desenha) {
+                    var x = evento.pageX - tela.offsetLeft;
+                    var y = evento.pageY - tela.offsetTop;
+                    pincel.fillStyle = 'blue';
+                    pincel.beginPath();
+                    pincel.arc(x, y, 10, 0, 2 * 3.14);
+                    pincel.fill();
+                }
+                console.log(x + ',' + y);
+            }
+
+            tela.onmousedown = function() { //onmousedown já recebe desenha true.
+
+                desenha = true;
+            }
+
+            tela.onmouseup = function() { //onmouseup já recebe desenha false.
+
+                desenha = false;
+            }
+    */
+</script>
